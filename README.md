@@ -1,3 +1,3 @@
 # Wetube Clone 2022 Update
 
-wetube is so fantastic!
+Wetube & kokoa clone & Vanilla JS are so exciting!!
