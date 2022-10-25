@@ -7,7 +7,7 @@
     "url": "git+https://github.com/Namyunha/wetube-clone-2022.git"
   },
   "scripts": {
-    "win": "node index.js"
+    "dev": "nodemon --exec babel-node src/server.js"
   },
   "author": "NamYunha<ajs998@naver.com>",
   "license": "MIT",
@@ -20,6 +20,8 @@
   },
   "devDependencies": {
     "@babel/core": "^7.19.6",
-    "@babel/preset-env": "^7.19.4"
+    "@babel/node": "^7.19.1",
+    "@babel/preset-env": "^7.19.4",
+    "nodemon": "^2.0.20"
   }
 }
