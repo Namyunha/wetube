@@ -25,10 +25,35 @@
 //   },
 // ];
 
-const videos = [];
+const videos = [
+  {
+    title: "First Video",
+    rating: 5,
+    comments: 2,
+    createdAt: "22 minutes ago",
+    views: 59,
+    id: 1,
+  },
+  {
+    title: "Second Video",
+    rating: 3,
+    comments: 22,
+    createdAt: "15 minutes ago",
+    views: 59,
+    id: 2,
+  },
+  {
+    title: "Third Video",
+    rating: 1,
+    comments: 243,
+    createdAt: "11 minutes ago",
+    views: 592,
+    id: 3,
+  },
+];
 
-export const test = (req, res) => {
-  return res.render("test", { pageTitle: "Test", videos });
+export const testhome = (req, res) => {
+  return res.render("testhome", { pageTitle: "Test", videos });
 };
 
 export const trending = (req, res) => {
