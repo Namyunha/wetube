@@ -1,29 +1,36 @@
-let videos = [
-  {
-    title: "First Video",
-    rating: "3",
-    comments: "2",
-    createdAt: "5",
-    views: "1",
-    id: 1,
-  },
-  {
-    title: "Second Video",
-    rating: "2",
-    comments: "22",
-    createdAt: "11",
-    views: "233",
-    id: 2,
-  },
-  {
-    title: "Third Video",
-    rating: "1",
-    comments: "211",
-    createdAt: "8",
-    views: "44.231",
-    id: 3,
-  },
-];
+// let videos = [
+//   {
+//     title: "First Video",
+//     rating: "3",
+//     comments: "2",
+//     createdAt: "5",
+//     views: "1",
+//     id: 1,
+//   },
+//   {
+//     title: "Second Video",
+//     rating: "2",
+//     comments: "22",
+//     createdAt: "11",
+//     views: "233",
+//     id: 2,
+//   },
+//   {
+//     title: "Third Video",
+//     rating: "1",
+//     comments: "211",
+//     createdAt: "8",
+//     views: "44.231",
+//     id: 3,
+//   },
+// ];
+
+const videos = [];
+
+export const test = (req, res) => {
+  return res.render("test", { pageTitle: "Test", videos });
+};
+
 export const trending = (req, res) => {
   return res.render("home", { pageTitle: "Home", videos });
 };
