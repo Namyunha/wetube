@@ -1,60 +1,29 @@
-// let videos = [
-//   {
-//     title: "First Video",
-//     rating: "3",
-//     comments: "2",
-//     createdAt: "5",
-//     views: "1",
-//     id: 1,
-//   },
-//   {
-//     title: "Second Video",
-//     rating: "2",
-//     comments: "22",
-//     createdAt: "11",
-//     views: "233",
-//     id: 2,
-//   },
-//   {
-//     title: "Third Video",
-//     rating: "1",
-//     comments: "211",
-//     createdAt: "8",
-//     views: "44.231",
-//     id: 3,
-//   },
-// ];
-
-const videos = [
+let videos = [
   {
     title: "First Video",
-    rating: 5,
-    comments: 2,
+    rating: "3",
+    comments: "2",
     createdAt: "22 minutes ago",
-    views: 59,
+    views: "1",
     id: 1,
   },
   {
     title: "Second Video",
-    rating: 3,
-    comments: 22,
+    rating: "2",
+    comments: "22",
     createdAt: "15 minutes ago",
-    views: 59,
+    views: "233",
     id: 2,
   },
   {
     title: "Third Video",
-    rating: 1,
-    comments: 243,
+    rating: "1",
+    comments: "211",
     createdAt: "11 minutes ago",
-    views: 592,
+    views: "44.231",
     id: 3,
   },
 ];
-
-export const testhome = (req, res) => {
-  return res.render("testhome", { pageTitle: "Test", videos });
-};
 
 export const trending = (req, res) => {
   return res.render("home", { pageTitle: "Home", videos });
@@ -73,5 +42,6 @@ export const postEdit = (req, res) => {
   const { id } = req.params;
   const { title } = req.body;
   videos[id - 1].title = title;
+  console.log(req.body);
   return res.redirect(`/videos/${id}`);
 };
