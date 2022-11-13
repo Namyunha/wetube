@@ -3,6 +3,7 @@ import mongoose from "mongoose";
 mongoose.connect("mongodb://127.0.0.1:27017/wetube-clone-2022", {
   useNewUrlParser: true,
   useUnifiedTopology: true,
+  userCreateIndex: true,
 });
 
 const db = mongoose.connection;
