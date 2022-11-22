@@ -7,8 +7,8 @@
     "url": "git+https://github.com/Namyunha/wetube-clone-2022.git"
   },
   "scripts": {
-    "dev": "nodemon --exec babel-node src/init.js",
-    "assets": "webpack --config webpack.config.js"
+    "dev:server": "nodemon",
+    "dev:assets": "webpack"
   },
   "author": "NamYunha<ajs998@naver.com>",
   "license": "MIT",
