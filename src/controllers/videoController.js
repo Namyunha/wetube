@@ -1,34 +1,10 @@
-// let videos = [
-//   {
-//     title: "First Video",
-//     rating: "3",
-//     comments: "2",
-//     createdAt: "22 minutes ago",
-//     views: "1",
-//     id: 1,
-//   },
-//   {
-//     title: "Second Video",
-//     rating: "2",
-//     comments: "22",
-//     createdAt: "15 minutes ago",
-//     views: "233",
-//     id: 2,
-//   },
-//   {
-//     title: "Third Video",
-//     rating: "1",
-//     comments: "211",
-//     createdAt: "11 minutes ago",
-//     views: "44.231",
-//     id: 3,
-//   },
-// ];
 import Video from "../models/Video";
 import User from "../models/User";
 
 export const home = async (req, res) => {
-  const videos = await Video.find({}).sort({ createdAt: "asc" });
+  const videos = await Video.find({})
+    .sort({ createdAt: "asc" })
+    .populate("owner");
   return res.render("home", { pageTitle: "Home", videos });
 };
 
