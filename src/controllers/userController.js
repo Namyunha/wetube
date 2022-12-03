@@ -117,7 +117,7 @@ export const finishGithubLogin = async (req, res) => {
     let user = await User.findOne({ email: emailObj.email });
     if (!user) {
       user = await User.create({
-        avatarUrl: userData.avatar_url,
+        // avatarUrl: userData.avatar_url,
         name: userData.name ? userData.name : userData.login,
         username: userData.login,
         email: emailObj.email,
@@ -146,7 +146,8 @@ export const getEdit = (req, res) => {
 export const postEdit = async (req, res) => {
   const {
     session: {
-      user: { _id, avatarUrl },
+      user: { _id },
+      // user: { _id, avatarUrl },
     },
     body: { name, email, username, location },
     file,
@@ -155,7 +156,7 @@ export const postEdit = async (req, res) => {
   const updatedUser = await User.findByIdAndUpdate(
     _id,
     {
-      avatarUrl: file ? file.path : avatarUrl,
+      // avatarUrl: file ? file.path : avatarUrl,
       name,
       email,
       username,
