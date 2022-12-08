@@ -140,7 +140,7 @@ header {
 }
 header .header__logo {
   color: red;
-  font-size: 50px;
+  font-size: 30px;
 }
 header ul {
   display: flex;
@@ -178,6 +178,13 @@ header .header__btn {
   height: 40px;
   border-radius: 50%;
   margin-left: 20px;
+}
+
+#title-name {
+  color: black;
+  font-weight: bold;
+  font-size: 25px;
+  font-stretch: 50%;
 }
 
 footer {
@@ -388,7 +395,7 @@ a {
 
 body {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  background-color: cornflowerblue;
+  background-color: #d0d0d0;
   color: white;
 }
 

@@ -5,7 +5,7 @@ header {
   align-items: center;
   .header__logo {
     color: $red;
-    font-size: 50px;
+    font-size: 30px;
   }
   ul {
     display: flex;
@@ -43,4 +43,10 @@ header {
   height: 40px;
   border-radius: 50%;
   margin-left: 20px;
+}
+#title-name {
+  color: black;
+  font-weight: bold;
+  font-size: 25px;
+  font-stretch: 50%;
 }
