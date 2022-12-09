@@ -29,6 +29,8 @@ header {
     margin-right: 0;
   }
   .header__btn {
+    position: relative;
+    top: 14px;
     background-color: white;
     color: $bg;
     padding: 5px 10px;
