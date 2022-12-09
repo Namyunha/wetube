@@ -388,6 +388,10 @@ input[type=submit]:disabled,
   text-decoration: underline;
 }
 
+.video__comments .video__comment .video__delete {
+  cursor: pointer;
+}
+
 a {
   color: inherit;
   text-decoration: none;

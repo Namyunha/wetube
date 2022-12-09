@@ -2,6 +2,8 @@ const videoContainer = document.getElementById("videoContainer");
 const form = document.getElementById("commentForm");
 const textarea = form.querySelector("textarea");
 const btn = form.querySelector("button");
+const videoComment = document.querySelector(".video__comment");
+const span2 = document.querySelector(".video__delete");
 
 const addComment = (text, id) => {
   const videoComments = document.querySelector(".video__comments ul");
@@ -44,6 +46,17 @@ const handleSubmit = async (event) => {
   }
 };
 
+const handleDelete = () => {
+  const commentId = videoComment.dataset.id;
+  fetch(`/api/comments/${commentId}/delete`, {
+    method: "DELETE",
+  });
+};
+
 if (form) {
   form.addEventListener("submit", handleSubmit);
+}
+
+if (span2) {
+  span2.addEventListener("click", handleDelete);
 }
