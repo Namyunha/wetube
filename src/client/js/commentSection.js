@@ -45,18 +45,15 @@ const handleSubmit = async (event) => {
     addComment(text, newCommentId);
   }
 };
-
 const handleDelete = () => {
   const commentId = videoComment.dataset.id;
   fetch(`/api/comments/${commentId}/delete`, {
     method: "DELETE",
   });
 };
-
 if (form) {
   form.addEventListener("submit", handleSubmit);
 }
-
 if (span2) {
   span2.addEventListener("click", handleDelete);
 }
