@@ -1,5 +1,38 @@
+#videoContainer {
+  video {
+    width: 1000px;
+  }
+  #videoControls {
+    position: relative;
+    bottom: 60px;
+    box-sizing: border-box;
+    width: 1000px;
+    // border: 2px solid black;
+    padding: 5px 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    #timeline {
+      width: 100%;
+    }
+    .videoControls__center {
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+    }
+  }
+  .videoControls__play {
+    display: flex;
+    width: 33%;
+    .videoControls__time {
+      margin-left: 10px;
+    }
+  }
+  .videoControls__options {
+    display: flex;
+  }
+}
 .video__data {
-  margin-top: 20px;
   display: flex;
   flex-direction: column;
   .video__title {

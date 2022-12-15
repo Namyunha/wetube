@@ -369,8 +369,39 @@ input[type=submit]:disabled,
   margin-bottom: 10px;
 }
 
+#videoContainer video {
+  width: 1000px;
+}
+#videoContainer #videoControls {
+  position: relative;
+  bottom: 60px;
+  box-sizing: border-box;
+  width: 1000px;
+  padding: 5px 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#videoContainer #videoControls #timeline {
+  width: 100%;
+}
+#videoContainer #videoControls .videoControls__center {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+#videoContainer .videoControls__play {
+  display: flex;
+  width: 33%;
+}
+#videoContainer .videoControls__play .videoControls__time {
+  margin-left: 10px;
+}
+#videoContainer .videoControls__options {
+  display: flex;
+}
+
 .video__data {
-  margin-top: 20px;
   display: flex;
   flex-direction: column;
 }

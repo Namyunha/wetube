@@ -4,21 +4,23 @@ block content
     div#videoContainer(data-id=video._id)
         video(src="/" + video.fileUrl)
         div#videoControls.videoControls
-            div.videoControls__play
-                span#play.videoControls__playBtn 
-                    i.fas.fa-play 
-                div.videoControls__time 
-                    span#currenTime 00:00
-                    span  /
-                    span#totalTime 00:00
             input(type="range",step="0.1", min="0",value="0.5" ,max="1")#timeline.videoControls__timeline
-            div.videoControls__volume 
-                input(type="range", step="1", value="0", min="0")#volume
-                span#mute 
-                    i.fas.fa-volime-up
-            div
-                span#fullScreen 
-                    i.fas.fa-expand 
+            div.videoControls__center
+                div.videoControls__play
+                    span#play.videoControls__playBtn 
+                        i.fas.fa-play 
+                    div.videoControls__time 
+                        span#currenTime 00:00
+                        span  /
+                        span#totalTime 00:00
+                div.videoControls__options
+                    div.videoControls__volume 
+                        input(type="range", step="1", value="0", min="0")#volume
+                        span#mute 
+                            i.fas.fa-volime-up
+                    div
+                        span#fullScreen 
+                            i.fas.fa-expand 
                     
     div.video__data
         p.video__title=video.title
