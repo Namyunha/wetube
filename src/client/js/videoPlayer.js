@@ -17,8 +17,10 @@ video.volume = volumeValue;
 const handlePlay = (e) => {
   if (video.paused) {
     video.play();
+    videoControls.classList.add("hidden");
   } else {
     video.pause();
+    videoControls.classList.remove("hidden");
   }
   playBtn.innerText = video.paused ? "Play" : "Pause";
 };
@@ -99,10 +101,6 @@ const handleMouseClick = () => {
   handlePlay();
 };
 
-const handleSpacebar = () => {
-  handlePlay();
-};
-
 const handleEnded = () => {
   const { id } = videoContainer.dataset;
   fetch(`/api/videos/${id}/view`, {
@@ -121,4 +119,3 @@ fullScreenBtn.addEventListener("click", handleFullscreen);
 video.addEventListener("mousemove", hadnleMouseMove);
 video.addEventListener("mouseleave", hadnleMouseLeave);
 video.addEventListener("click", handleMouseClick);
-window.addEventListener("keydown", handleSpacebar);
